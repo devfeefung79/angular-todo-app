@@ -1,0 +1,116 @@
+@import "../styles.sass"
+
+:host
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
+    font-size: 14px
+    color: $dark-grey
+    box-sizing: border-box
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+
+.overlay-wrapper
+    z-index: 1000
+    pointer-events: auto
+    position: absolute
+    top: 0
+    left: 0
+    background: $light-grey
+    opacity: 0.5
+    height: 100%
+    width: 100%
+
+h1, h2, h3, h4, h5, h6
+    margin: 8px 0
+
+.toolbar
+    @include flex-row
+    align-items: center
+    justify-content: space-between
+    flex-wrap: wrap
+    background: $base-green
+    padding: 4px 16px
+    color: $white
+    box-shadow: 2px 2px 4px 2px $light-grey
+    font-weight: 600
+
+.add-new-btn
+    @include clickable-btn
+    font-size: 14px
+    font-weight: unset
+    margin: 5px
+    padding: 10px 12px
+    border-radius: 5px
+    color: $white
+    background: $btn-blue
+    &:hover
+        background: $btn-hover-blue-background
+
+.card-container
+    @include flex-row
+    justify-content: center
+    align-items: flex-start
+    flex-wrap: wrap
+    margin-top: 16px
+
+.card
+    @include flex-column
+    all: unset
+    border-radius: 4px
+    border: 1px solid $light-grey-border
+    background-color: $light-grey-background
+    max-width: 340px
+    margin: 0 8px 16px
+    transition: all 0.2s ease-in-out
+    line-height: 24px
+
+.card-header
+    @include flex-row
+    align-items: center
+    justify-content: space-between
+    padding: 4px 16px
+    background: $base-light-green
+
+.delete-category-btn
+    @include clickable-btn
+    color: $white
+    background: $btn-red
+    box-shadow: 2px 2px 4px 2px rgba(110, 110, 110, 0.2)
+    border-radius: 4px
+    padding: 3px 10px
+    height: 28px
+    font-size: 1rem
+    font-weight: 400
+
+.card-content
+    @include flex-column
+    padding: 8px 16px
+
+.todo-item-box
+    @include flex-row
+    align-items: center
+    justify-content: space-between
+    margin: 3px
+    input[type='checkbox']
+        margin: 0px 4px 0px 0px
+
+.delete-todo-btn
+    @include clickable-btn
+    background: transparent
+    padding: 4px 0px 0px 0px
+    height: 20px
+    width: 20px
+    color: $btn-light-green
+    &:hover
+        color: $btn-dark-green
+
+.add-new-todo
+    border: none
+    border-bottom: 1px solid $light-grey
+    background: transparent
+    border-radius: 0px
+    outline: none
+    margin: 3px
+    height: 24px
+    font-size: 14px
+    &:focus
+        border-bottom: 1px solid $dark-grey

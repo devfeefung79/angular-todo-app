@@ -1,0 +1,62 @@
+@import "../../styles.sass"
+
+dialog
+  position: absolute
+  top: 130px
+  z-index: 1000
+  height: fit-content
+  min-width: 320px
+  border: 1px solid $light-grey-border
+  border-radius: 8px
+  background-color: $light-grey-background
+  padding: 0px
+
+  h2
+    margin: 0px
+
+  .header
+    padding: 12px 16px
+    color: $white
+    background: $base-green
+    border-radius: 8px 8px 0px 0px
+
+  .content
+    padding: 16px 16px 8px
+
+    input
+      height: 24px
+      width: 100%
+      border: none
+      border-bottom: 1px solid $light-grey
+      border-radius: 0px
+      background: transparent
+      outline: none
+      margin: 3px
+      font-size: 14px
+      &:focus
+        border-bottom: 1px solid $dark-grey
+
+  .footer
+    display: flex
+    justify-content: flex-end
+    padding: 8px 16px
+
+    button
+      @include clickable-btn
+      border-radius: 4px
+      margin: 5px
+      padding: 6px 12px
+      font-size: 14px
+      font-weight: 400
+
+    .close-btn
+      color: $white
+      background: $btn-grey
+      &:hover
+        background: $btn-hover-grey-background
+
+    .confirm-btn
+      color: $white
+      background: $btn-blue
+      &:hover
+        background: $btn-hover-blue-background

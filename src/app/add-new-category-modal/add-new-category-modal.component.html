@@ -1,0 +1,12 @@
+<dialog [open]="isOpen">
+  <div class="header">
+    <h2>Add New Category</h2>
+  </div>
+  <div class="content">
+    <input placeholder="Input the name of the category" (change)="getNewCategoryName($event)"/>
+  </div>
+  <div class="footer">
+    <button class="close-btn" (click)="close.emit()">Close</button>
+    <button class="confirm-btn" (click)="confirm()">Confirm</button>
+  </div>
+</dialog>
